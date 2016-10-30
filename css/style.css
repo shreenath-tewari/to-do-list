@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+body{
+    background: #ecf0f1;
+    padding: 100px;
+}
+
+body,header,button{
+    font-family: 'Roboto', sans-serif;
+}
+
+.noFill{
+    fill: none;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background: #c0392b;
+    position: fixed;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 2px 4px  #7f8c8d;
+}
+
+header input{
+    width: 100%;
+    height: 50px;
+    color: #ffffff;
+    background:  rgba(255, 255, 255, 0.2);
+    font-size: 15px;
+    font-weight: 400; 
+    text-indent: 18px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: none;
+    outline: none;
+    border: 0px;
+    float: left;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+}
+
+header input::-webkit-input-placeholder{
+    color:rgba(255, 255, 255, 0.75);
+}
+
+
+header input::-moz-input-placeholder{
+    color:rgba(255, 255, 255, 0.75);
+}
+
+header input::-ms-input-placeholder{
+    color:rgba(255, 255, 255, 0.75);
+}
+
+header input::-o-input-placeholder{
+    color:rgba(255, 255, 255, 0.75);
+}
+
+header button{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 25px;
+    background: #ffffff;
+    border: 0px;
+    outline: none;
+    box-shadow: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+}
+
+header button svg{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    margin: -8px 0px 0px -8px;
+}
+
+header button svg .fill{
+    fill: #c0392b;
+}
+
+.container{
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+
+ul.todo{
+    width: 100%;
+    float: left;
+}
+
+ul.todo li{
+    width: 100%;
+    min-height: 50px;
+    float: left;
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0px 1px 2px  #7f8c8d;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    padding: 14px 14px 15px 14px;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+}
+
+ul.todo li::last-of-type{
+    margin: 0 0 0 0;
+}
+
+ul.todo li .buttons{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+ul.todo li .buttons button{
+    width: 50px;
+    height: 50px;
+    background: none;
+    position: relative;
+    box-shadow: none;
+    border: none;
+    float: left;
+    outline: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+}
+
+ul.todo li .buttons button:last-of-type:before{
+    content: '';
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    background: #bdc3c7;
+}
+
+ul.todo li .buttons button.removeButton svg{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -11px 0 0 -11px;
+    cursor: pointer;
+}
+
+ul.todo#completed .buttons button.completeButton svg{
+    border: 0px;
+    background: #27ae60;
+}
+
+ul.todo#completed .buttons button.completeButton svg .fill{
+    fill: #ffffff;
+}
+
+ul.todo:not(#completed) .buttons button.completeButton:hover svg{
+    border: 0px;
+    background: #2ecc71;
+}
+
+ul.todo:not(#completed) .buttons button.completeButton:hover svg .fill{
+    fill: #ffffff;
+}
+
+ul.todo li .buttons button svg .fill{
+    transition:fill 0.2s ease;
+}
+
+ul.todo li .buttons button.removeButton svg .fill{
+    fill: #7f8c8d;
+}
+
+ul.todo li .buttons button.removeButton:hover svg .fill{
+    fill: #e74c3c;
+}
+
+ul.todo li .buttons button.completeButton svg{
+    width: 22px;
+    height: 22px;
+    border-radius: 25px; 
+    border: 1.5px solid #27ae60;
+}
+
+ul.todo .buttons button.completeButton svg .fill{
+    fill:#27ae60;
+}
+
+ul.todo#completed:not(:empty) {
+  position:relative;
+  padding:60px 0 0 0;
+}
+
+ul.todo#completed:not(:empty):before {
+  content:'';
+  width:150px;
+  height:1px;
+  background:#e74c3c;
+  position:absolute;
+  top:30px;
+  left:50%;
+  margin:0 0 0 -75px;
+}
